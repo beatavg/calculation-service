@@ -24,31 +24,3 @@ def loan_repayment(
     monthly_payment = principal * monthly_rate * factor / (factor - Decimal("1")) # Formula
 
     return monthly_payment.quantize(Decimal("0.01"))
-
-from decimal import Decimal
-
-if __name__ == "__main__": # Do not run when executed by test
-    while True:
-        principal_input = input("Loan amount (or q to quit): ")
-
-        if principal_input.lower() == "q":
-            break
-
-        annual_rate_input = input("Annual interest rate (%): ")
-        months_input = input("Months: ")
-
-        try:
-            principal = Decimal(principal_input)
-            annual_rate = Decimal(annual_rate_input)
-            months = int(months_input)
-
-            payment = loan_repayment(
-                principal,
-                annual_rate,
-                months
-            )
-
-            print(f"Monthly repayment: {payment}")
-
-        except ValueError as e:
-            print(e)

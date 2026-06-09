@@ -11,22 +11,3 @@ def factorial(n: int) -> int:
     
     return result
 
-if __name__ == "__main__": # Do not run when executed by test
-    while True:
-        user_input = input("Enter a number for factorial (or q to quit): ")
-        if user_input.lower() == "q":
-                break
-        
-        # Convert input to integer
-        try:
-            n = int(user_input)
-        except ValueError:
-            print("Input must be an integer")
-            continue
-
-        # Run factorial and handle validation errors
-        try:
-            result = factorial(n)
-            print(result)
-        except (TypeError, ValueError) as e:
-            print(e)

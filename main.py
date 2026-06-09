@@ -6,6 +6,7 @@ from app.services.loan_repayment import loan_repayment
 from fastapi import FastAPI
 
 # python -m uvicorn main:app --reload
+# python3 -m pytest
 
 # http://127.0.0.1:8000/docs
 app = FastAPI()
