@@ -137,5 +137,4 @@ Examples:
 * No database or persistence layer.
 * Very large factorial inputs are supported, but may require substantial processing time and memory.
 
-```
-```
+
