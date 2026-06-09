@@ -5,18 +5,12 @@ from app.services.factorial import factorial
 from app.services.loan_repayment import loan_repayment
 from fastapi import FastAPI, HTTPException
 
-# python -m uvicorn main:app --reload
-# python3 -m pytest
-
-# http://127.0.0.1:8000/docs
 app = FastAPI()
 
-# http://127.0.0.1:8000/
 @app.get("/")
 def root():
     return {"message": "Calculation Service"}
 
-# http://127.0.0.1:8000/fibonacci/10
 @app.get("/fibonacci/{n}")
 def get_fibonacci(n: int):
     try:
@@ -27,8 +21,6 @@ def get_fibonacci(n: int):
             detail=(str(e))
         )
     
-
-# http://127.0.0.1:8000/factorial/5
 @app.get("/factorial/{n}")
 def get_factorial(n: int):
     try:
@@ -39,7 +31,6 @@ def get_factorial(n: int):
             detail=(str(e))
         )
 
-# http://127.0.0.1:8000/loan_repayment?principal=12000&annual_rate=0&months=12
 @app.get("/loan_repayment")
 def get_loan(
     principal: Decimal,

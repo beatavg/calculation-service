@@ -115,7 +115,7 @@ Response:
 Run all tests:
 
 ```bash
-pytest
+python -m pytest
 ```
 
 ## Validation
