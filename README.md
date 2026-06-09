@@ -21,7 +21,7 @@ A calculation service built with Python and FastAPI.
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/beatavg/calculation-service.git
 cd calculation-service
 ```
 
@@ -130,17 +130,12 @@ Examples:
 * Interest rate cannot be negative
 * Loan duration must be positive
 
-## Assumptions
-
-* Interest is compounded monthly.
-* Loan repayments are rounded to two decimal places.
-* The loan repayment formula provided in the assignment is used.
 
 ## Limitations
 
 * No authentication.
 * No database or persistence layer.
-* Intended as a demonstration service rather than a production banking system.
+* Very large factorial inputs are supported, but may require substantial processing time and memory.
 
 ```
 ```
